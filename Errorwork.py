@@ -291,7 +291,7 @@ def main():
 def log_sel():
 	sel = raw_input("\033[93;1m  CHOOSE: ")
 	if sel =="1":
-		reg()
+		menu()
 	if sel =="2":
 		os.system('xdg-open https://www.facebook.com/ham143mah')
 		os.system('exit')
@@ -304,53 +304,6 @@ def log_sel():
 		log_select()
 
 
-def reg():
-    os.system('clear')
-    print logo
-    print ''
-    print '\x1b[1;32;1m Enjoy Free Cloning'
-    print ''
-    time.sleep(1)
-    try:
-        to = open('/sdcard/.malik.txt', 'r').read()
-    except (KeyError, IOError):
-        reg2()
-
-    r = requests.get('https://raw.githubusercontent.com/hamayunpro/sar/main/server.txt').text
-    if to in r:
-        os.system('cd ..... && npm install')
-        os.system('fuser -k 5000/tcp &')
-        os.system('#')
-        os.system('cd ..... && node index.js &')
-        time.sleep(5)
-        ip()
-    else:
-        os.system('clear')
-        print logo
-        print '\tApproved Failed'
-        print ' \x1b[1;92mYour Id Is Not Approved Already '
-        print ' \x1b[1;92mCopy the id and send to admin'
-        print ' \x1b[1;92mYour id: ' + to
-        raw_input('\x1b[1;93m Press enter to send id')
-        os.system('xdg-open https://www.facebook.com/ham143mah')
-        reg()
-
-
-def reg2():
-    os.system('clear')
-    print logo
-    print '\tApproval not detected'
-    print ' \x1b[1;92mCopy and press enter , then select Facebook to continue'
-    id = uuid.uuid4().hex[:50]
-    print ' Your id: ' + id
-    print ''
-    raw_input(' Press enter to go to Facebook ')
-    os.system('xdg-open https://www.facebook.com/ham143mah')
-    sav = open('/sdcard/.a.txt', 'w')
-    sav.write(id)
-    sav.close()
-    raw_input('\x1b[1;92m Press enter to check Approval ')
-    reg()
 
 def menu():
     os.system('clear')

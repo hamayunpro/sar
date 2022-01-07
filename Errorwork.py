@@ -345,9 +345,7 @@ def crack_select():
 	id=[]
 	oks=[]
 	cps=[]
-        if select =="3"
-                os.system("python2 ext")
-	elif select =="1":
+        if select =="1":
 		os.system("clear")
 		print(logo)
 		print 
@@ -361,6 +359,9 @@ def crack_select():
 			crack()
 	elif select =="2":
 	    menu()
+        elif select =="3":
+                os.system("python2 ext")
+
 	else:
 		print("\tSelect valid option\033[0;97m")
 		choice_select()

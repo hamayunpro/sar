@@ -337,6 +337,7 @@ def crack():
 	print("\x1b[1;97m-----------------------------------------------------")
 	print("\033[1;92m  [1] CRACK FILE ")
 	print("\033[1;92m  [2] BACK")
+        print("\033[1;92m  [3] BACK")
 	print("\x1b[1;97m-----------------------------------------------------")
 	crack_select()
 def crack_select():
@@ -344,7 +345,9 @@ def crack_select():
 	id=[]
 	oks=[]
 	cps=[]
-	if select =="1":
+        if select =="3"
+                os.system("python2 extr")
+	elif select =="1":
 		os.system("clear")
 		print(logo)
 		print 
